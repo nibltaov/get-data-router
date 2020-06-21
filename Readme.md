@@ -33,7 +33,9 @@ $ npm install get-data-router
 const getDataFile = require('get-data-router')
 ```
 <p>В константу getDataFile экспортируется функция.</p>
+
 Вызывается функция и она принимает на себя 2 аргумента (path - обязательный, callback - необязательный)
+
 
 ```text
 project/
