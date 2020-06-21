@@ -1,6 +1,7 @@
 <p align="center" style="font-size: 40px; font-weight: bold">Get Data Router</p>
 
-<p align="center">Create routes quickly and easily.</p>
+<p align="center">Create routes quickly and easily with the independent get-data-router module</p>
+<p align="center">Создавайте маршруты быстро и легко с независимым модулем get-data-router</p>
 
 - [En](#en)
 - [Ru](#ru)
@@ -18,6 +19,7 @@ $ npm install get-data-router
 - [Принцип работы](#принцип-работы)
 - [Работа без callback](#работа-без-callback)
 - [Работа с использованием callback](#работа-с-использованием-callback)
+- [Создание маршрутов](#создание-маршрутов)
 
 ## Установка
 
@@ -165,7 +167,7 @@ module.exports = {
     },
     post: {
         fn: postUser,
-        mw: [ upload.single('file') ] /* Middleware */
+        mw: [ upload.single('file') ] /* Middleware - всегда должен быть массивом */
     }
 }
 ```
