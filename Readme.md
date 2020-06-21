@@ -27,6 +27,20 @@ $ npm install get-data-router
 
 ## Принцип работы
 
+```info
+project/
+├── node_modules/
+├── public
+├── routers
+│   ├── user/
+│   │   ├── add.js
+│   │   └── edit.js
+│   ├──user.js
+│   └──index.js
+├── router.js
+└── index.js
+```
+
 Подключение модуля происходит через стандарную функцию в Node.js require
 
 ```js
@@ -36,6 +50,7 @@ const getDataFile = require('get-data-router')
 
 Вызывается функция и она принимает на себя 2 аргумента (path - обязательный, callback - необязательный)
 
+* path - путь к папке с вашими страницами
 
 ```text
 project/
