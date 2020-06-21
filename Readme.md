@@ -1,4 +1,4 @@
-<p align="center" size="25">Get Data Router</p>
+<p align="center" style="font-size: 40px; font-weight: bold">Get Data Router</p>
 
 <p align="center">Create routes quickly and easily.</p>
 
@@ -17,36 +17,73 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 ```bash
 $ npm install get-data-router
 ```
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-11111111
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
+<p align="center">1</p>
