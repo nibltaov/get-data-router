@@ -78,9 +78,11 @@ const data = getDataFile('./routers')
 
 ```js
 const upload = require('multer')
+
 async function getUser(req, res) {
     res.send('Route works')
 }
+
 async function postUser(req, res) {
     res.send('Route works')
 }
