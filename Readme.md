@@ -16,6 +16,7 @@ $ npm install get-data-router
 ## Ru
 - [Установка](#установка)
 - [Принцип работы](#принцип-работы)
+- [Работа без callback](#работа-без-callback)
 
 ## Установка
 
@@ -35,12 +36,13 @@ $ npm install get-data-router
 ```js
 const getDataFile = require('get-data-router')
 ```
-<p>В константу getDataFile экспортируется функция.</p>
+<p>В константу <b>getDataFile</b> экспортируется функция.</p>
 
 Вызывается функция и она принимает на себя 2 аргумента (path - обязательный, callback - необязательный)
 
 * path - путь к папке с вашими файлами для создания маршрутов
 
+## Работа без callback
 
 ```text
 project/
@@ -78,6 +80,9 @@ const data = getDataFile('./routers')
 В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
 ```js
+
+## Работа с использованием callback
+
 const upload = require('multer')
 
 async function getUser(req, res) {
