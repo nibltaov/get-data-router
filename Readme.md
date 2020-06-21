@@ -141,7 +141,7 @@ module.exports = {
     get: getUser,
     post: {
         fn: postUser,
-        mw: [ upload.single('file') ] /* Middleware */
+        mw: [ upload.single('file') ] /* Middleware - всегда должен быть массивом */
     }
 }
 ```
@@ -160,7 +160,7 @@ async function postUser(req, res) {
 
 module.exports = {
     get: {
-        params: ':id',
+        params: ':id', /* Встает после основного маршрута  */
         fn: getUser
     },
     post: {
