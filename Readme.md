@@ -79,9 +79,10 @@ const data = getDataFile('./routers')
 
 В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
+## Работа с использованием callback
+
 ```js
 
-## Работа с использованием callback
 
 const upload = require('multer')
 
