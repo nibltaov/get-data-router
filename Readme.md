@@ -72,3 +72,30 @@ const data = getDataFile('./routers')
 
 }
 ```
+На примере файла <b>./routers/user.js</b> расмотри создания маршрута
+
+В примере для загрузки фалов используется модуль [multer](https://www.npmjs.com/package/multer)
+
+```js
+
+    './routers/user.js': { 
+                            get: { params: ':id', fn: [AsyncFunction: getUser] }, 
+                            post: { fn: [AsyncFunction: postUser], mw: [ [Function: multerMiddleware] ] }  
+                          },
+const fU = require('multer')
+async function getUser(req, res) {
+    res.send('Route works')
+}
+async function postUser(req, res) {
+    res.send('Route works')
+}
+
+module.exports = {
+    get: getUser,
+    post: {
+        fn: postUser,
+        mw: [ [Function: multerMiddleware] ]
+    }
+}
+
+```
