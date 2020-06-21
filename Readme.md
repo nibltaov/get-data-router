@@ -33,8 +33,7 @@ $ npm install get-data-router
 const getDataFile = require('get-data-router')
 ```
 <p>В константу getDataFile экспортируется функция.</p>
-<p>Вызывается функция и она принимает на себя 2 аргумента (path - обязательный, callback - необязательный)</p>
-
+Вызывается функция и она принимает на себя 2 аргумента (path - обязательный, callback - необязательный)
 
 ```text
 project/
@@ -44,12 +43,24 @@ project/
 │   ├── user/
 │   │   ├── add.js
 │   │   └── edit.js
-│   ├──users.js
+│   ├──user.js
 │   └──index.js
 ├── router.js
 └── index.js
 ```
 ```js
 const getDataFile = require('get-data-router')
-getDataFile('./routers')
+const data = getDataFile('./routers')
+```
+Если вы не используете callback то должны вызвать функцию в переменной или константе и она отдаст вам следующий объект
+
+```js
+{
+    './routers/index.js': { get: [AsyncFunction: getIndex] },
+    './routers/user.js': { 
+                            get: { params: ':id', fn: [AsyncFunction: getUser] }, 
+                            post: { fn: [AsyncFunction: postUser], mw: [ [Function: multerMiddleware] ] }  
+                          },
+    './routers/user/add.js': { get }
+}
 ```
