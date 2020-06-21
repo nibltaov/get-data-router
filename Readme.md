@@ -87,10 +87,10 @@ const data = getDataFile('./routers')
 
 
 callback принимает на себя 4 аргумента:
-* path - путь маршрута
-* method - метод http протакола
-* fn - функцию для работы маршрута
-* mw - промежуточный слой (middleware)
+* <b>path</b> - путь маршрута
+* <b>method</b> - метод http протакола
+* <b>fn</b> - функцию для работы маршрута
+* <b>mw</b> - промежуточный слой (middleware)
 
 
 ```js
