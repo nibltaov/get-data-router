@@ -2,9 +2,18 @@
 
 <p align="center">Create routes quickly and easily.</p>
 
+- [En](#installation)
+- [Ru](#установка)
+
 ## Installation
 This is a [Node.js](https://nodejs.org/en/) module available through the
-[npm registry](https://www.npmjs.com/).
+[npm](https://www.npmjs.com/).
+```bash
+$ npm install get-data-router
+```
+## Установка
+This is a [Node.js](https://nodejs.org/en/) module available through the
+[npm](https://www.npmjs.com/).
 ```bash
 $ npm install get-data-router
 ```
