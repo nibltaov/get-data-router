@@ -82,7 +82,7 @@ const data = getDataFile('./routers')
                             get: { params: ':id', fn: [AsyncFunction: getUser] }, 
                             post: { fn: [AsyncFunction: postUser], mw: [ [Function: multerMiddleware] ] }  
                           },
-const fU = require('multer')
+const upload = require('multer')
 async function getUser(req, res) {
     res.send('Route works')
 }
@@ -94,7 +94,7 @@ module.exports = {
     get: getUser,
     post: {
         fn: postUser,
-        mw: [ [Function: multerMiddleware] ]
+        mw: [ upload.single('file') ]
     }
 }
 
