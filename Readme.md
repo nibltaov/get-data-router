@@ -27,8 +27,24 @@ $ npm install get-data-router
 
 ## Принцип работы
 
-<p align="center">Подключение модуля происходит через стандарную функцию в Node.js require</p>
+Подключение модуля происходит через стандарную функцию в Node.js require
 
 ```js
 const getDataFile = require('get-data-router')
+```
+<p>В константу getDataFile экспортируется функция.</p>
+<p></p>
+
+```text
+project/
+├── node_modules/
+├── public
+├── routers
+│   ├── user/
+│   │   ├── add.js
+│   │   └── edit.js
+│   ├──users.js
+│   └──index.js
+├── routers.js
+└── index.js
 ```
