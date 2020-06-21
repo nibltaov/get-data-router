@@ -78,7 +78,7 @@ const data = getDataFile('./routers')
 ```
 На примере файла <b>./routers/user.js</b> расмотри создания маршрута
 
-В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
+
 
 ## Работа с использованием callback
 
@@ -88,11 +88,40 @@ const data = getDataFile('./routers')
 
 
 callback принимает на себя 4 аргумента:
-* <b>path</b> - путь маршрута
+* <b>path</b> - путь маршрута. Отдает готовый путь:
+    *  ./routers/index.js       -> /
+    *  ./routers/user.js        -> /user
+    *  ./routers/user/add.js    -> /user/add
+    *  ./routers/user/edit.js   -> /user/edit
+
 * <b>method</b> - метод http протакола
 * <b>fn</b> - функцию для работы маршрута
 * <b>mw</b> - промежуточный слой (middleware)
 
+В примере работы callback используется framework express
+
+```js
+const app = require('express'),
+
+      rout = app.Router(),
+
+      getDateFile = require('get-date-router')
+
+getDateFile('./routers', (path, method, fn, mw) => {
+
+    if(mw != undefined) {
+        rout[method](path, ...mw, fn)
+    } else {
+        rout[method](path, fn)
+    }
+
+})
+
+module.exports = rout
+```
+
+
+В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
 ```js
 
