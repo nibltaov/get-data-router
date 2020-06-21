@@ -74,7 +74,7 @@ const data = getDataFile('./routers')
 ```
 На примере файла <b>./routers/user.js</b> расмотри создания маршрута
 
-В примере для загрузки фалов используется модуль [multer](https://www.npmjs.com/package/multer)
+В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
 ```js
 
