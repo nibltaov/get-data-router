@@ -1,6 +1,6 @@
 {
   "name": "get-data-router",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This plugin will help facilitate work with routes.",
   "main": "getDate.js",
   "scripts": {
