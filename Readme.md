@@ -86,6 +86,11 @@ const data = getDataFile('./routers')
 * Отдаёт готовый результат маршрута
 
 
+callback принимает на себя 4 аргумента:
+* path - путь маршрута
+* method - метод http протакола
+* fn - функцию для работы маршрута
+* mw - промежуточный слой (middleware)
 
 
 ```js
@@ -105,7 +110,7 @@ module.exports = {
     get: getUser,
     post: {
         fn: postUser,
-        mw: [ upload.single('file') ]
+        mw: [ upload.single('file') ] /* Middleware */
     }
 }
 ```
