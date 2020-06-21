@@ -11,5 +11,13 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nibltaov/get-data-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nibltaov/get-data-router/issues"
+  },
+  "homepage": "https://github.com/nibltaov/get-data-router#readme"
 }
