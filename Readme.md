@@ -14,12 +14,20 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 $ npm install get-data-router
 ```
 ## Ru
-- [En](#установка)
+- [Установка](#установка)
 
 ## Установка
-This is a [Node.js](https://nodejs.org/en/) module available through the
+
+Это модуль [Node.js](https://nodejs.org/en/) доступный через
 [npm](https://www.npmjs.com/).
 ```bash
 $ npm install get-data-router
 ```
 
+## Принцип работы
+
+<p align="center">Подключение модуля происходит через стандарную функцию в Node.js require</p>
+
+```js
+const getDataFile = require('get-data-router')
+```
