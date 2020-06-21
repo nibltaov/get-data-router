@@ -27,18 +27,8 @@ $ npm install get-data-router
 
 ## Принцип работы
 
-```info
-project/
-├── node_modules/
-├── public
-├── routers
-│   ├── user/
-│   │   ├── add.js
-│   │   └── edit.js
-│   ├──user.js
-│   └──index.js
-├── router.js
-└── index.js
+```text
+Этот модуль преднозначен для создания маршрутизации из файлов. Название вашего файла автоматически становится название маршрута 
 ```
 
 Подключение модуля происходит через стандарную функцию в Node.js require
