@@ -89,10 +89,10 @@ const data = getDataFile('./routers')
 
 callback принимает на себя 4 аргумента:
 * <b>path</b> - путь маршрута. Отдает готовый путь:
-    *  ./routers/index.js       -> /
-    *  ./routers/user.js        -> /user
-    *  ./routers/user/add.js    -> /user/add
-    *  ./routers/user/edit.js   -> /user/edit
+    *  <b>./routers/index.js</b>       -> <b>/</b>
+    *  <b>./routers/user.js </b>       -> <b>/user</b>
+    *  <b>./routers/user/add.js </b>   -> <b>/user/add</b>
+    *  <b>./routers/user/edit.js  </b> -> <b>/user/edit</b>
 
 * <b>method</b> - метод http протакола
 * <b>fn</b> - функцию для работы маршрута
