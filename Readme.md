@@ -77,11 +77,6 @@ const data = getDataFile('./routers')
 В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
 ```js
-
-    './routers/user.js': { 
-                            get: { params: ':id', fn: [AsyncFunction: getUser] }, 
-                            post: { fn: [AsyncFunction: postUser], mw: [ [Function: multerMiddleware] ] }  
-                          },
 const upload = require('multer')
 async function getUser(req, res) {
     res.send('Route works')
@@ -97,5 +92,4 @@ module.exports = {
         mw: [ upload.single('file') ]
     }
 }
-
 ```
