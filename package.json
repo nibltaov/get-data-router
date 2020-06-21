@@ -1,0 +1,15 @@
+{
+  "name": "get-date-router",
+  "version": "1.0.9",
+  "description": "This plugin will help facilitate work with routes.",
+  "main": "getDate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}
