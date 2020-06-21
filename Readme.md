@@ -52,7 +52,7 @@ project/
 const getDataFile = require('get-data-router')
 const data = getDataFile('./routers')
 ```
-Если вы не используете callback то должны вызвать функцию в переменной или константе и она отдаст вам следующий объект
+Если вы не используете callback то должны вызвать функцию в переменной или константе и она отдаст вам к примеру следующий объект:
 
 ```js
 {
@@ -61,6 +61,8 @@ const data = getDataFile('./routers')
                             get: { params: ':id', fn: [AsyncFunction: getUser] }, 
                             post: { fn: [AsyncFunction: postUser], mw: [ [Function: multerMiddleware] ] }  
                           },
-    './routers/user/add.js': { get }
+    './routers/user/add.js': { post: [AsyncFunction: setUser] },
+    './routers/user/edit.js': { put: [AsyncFunction: editUser] }
+
 }
 ```
