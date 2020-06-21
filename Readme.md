@@ -91,6 +91,7 @@ callback принимает на себя 4 аргумента:
 * <b>path</b> - путь маршрута. Отдает готовый путь:
     *  <b>./routers/index.js</b>       -> <b>/</b>
     *  <b>./routers/user.js </b>       -> <b>/user</b>
+    *  <b>./routers/user.js </b>       -> <b>/user/:id</b>
     *  <b>./routers/user/add.js </b>   -> <b>/user/add</b>
     *  <b>./routers/user/edit.js  </b> -> <b>/user/edit</b>
 
@@ -119,7 +120,7 @@ getDateFile('./routers', (path, method, fn, mw) => {
 
 module.exports = rout
 ```
-
+## Создание маршрутов
 
 В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
@@ -138,6 +139,30 @@ async function postUser(req, res) {
 
 module.exports = {
     get: getUser,
+    post: {
+        fn: postUser,
+        mw: [ upload.single('file') ] /* Middleware */
+    }
+}
+```
+```js
+
+
+const upload = require('multer')
+
+async function getUser(req, res) {
+    res.send('Route works')
+}
+
+async function postUser(req, res) {
+    res.send('Route works')
+}
+
+module.exports = {
+    get: {
+        params: ':id',
+        fn: getUser
+    },
     post: {
         fn: postUser,
         mw: [ upload.single('file') ] /* Middleware */
