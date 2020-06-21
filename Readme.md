@@ -2,8 +2,10 @@
 
 <p align="center">Create routes quickly and easily.</p>
 
-- [En](#installation)
-- [Ru](#установка)
+- [En](#en)
+- [Ru](#ru)
+## En
+- [installation](#installation)
 
 ## Installation
 This is a [Node.js](https://nodejs.org/en/) module available through the
@@ -11,79 +13,13 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 ```bash
 $ npm install get-data-router
 ```
+## Ru
+- [En](#установка)
+
 ## Установка
 This is a [Node.js](https://nodejs.org/en/) module available through the
 [npm](https://www.npmjs.com/).
 ```bash
 $ npm install get-data-router
 ```
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
-<p align="center">1</p>
+
