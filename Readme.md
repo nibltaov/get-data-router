@@ -7,6 +7,10 @@
 - [Ru](#ru)
 ## En
 - [installation](#installation)
+- [Principle of operation](#principle-of-operation)
+- [Work without callback](#Work-without-callback)
+- [Работа с использованием callback](#work-using-callback)
+- [Создание маршрутов](#route-creation)
 
 ## Installation
 This is a [Node.js](https://nodejs.org/en/) module available through the
@@ -14,6 +18,22 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 ```bash
 $ npm install get-data-router
 ```
+## Principle of operation
+
+
+This module is designed to create routing from files. The name of your file automatically becomes the name of the route. You can create all possible http protocol protocols in your route
+
+The module is connected through a standard function in Node.js require
+
+```js
+const getDataFile = require('get-data-router')
+```
+<p> The function is exported to the <b> getDataFile </b> constant. </p>
+
+The function is called and it takes on 2 arguments (path - required, callback - optional)
+
+* path - path to the folder with your files for creating routes
+
 ## Ru
 - [Установка](#установка)
 - [Принцип работы](#принцип-работы)
