@@ -9,8 +9,8 @@
 - [installation](#installation)
 - [Principle of operation](#principle-of-operation)
 - [Work without callback](#Work-without-callback)
-- [Работа с использованием callback](#work-using-callback)
-- [Создание маршрутов](#route-creation)
+- [Work using callback](#work-using-callback)
+- [Route creation](#route-creation)
 
 ## Installation
 This is a [Node.js](https://nodejs.org/en/) module available through the
@@ -33,6 +33,132 @@ const getDataFile = require('get-data-router')
 The function is called and it takes on 2 arguments (path - required, callback - optional)
 
 * path - path to the folder with your files for creating routes
+
+
+## Work without callback
+
+```text
+project/
+├── node_modules/
+├── public
+├── routers
+│   ├── user/
+│   │   ├── add.js
+│   │   └── edit.js
+│   ├──user.js
+│   └──index.js
+├── router.js
+└── index.js
+```
+```js
+const getDataFile = require('get-data-router')
+const data = getDataFile('./routers')
+```
+If you do not use callback, you must call the function in a variable or constant and it will give you, for example, the following object:
+
+```js
+{
+    './routers/index.js': { get: [AsyncFunction: getIndex] },
+    './routers/user.js': { 
+                            get: { params: ':id', fn: [AsyncFunction: getUser] }, 
+                            post: { fn: [AsyncFunction: postUser], mw: [ [Function: multerMiddleware] ] }  
+                          },
+    './routers/user/add.js': { post: [AsyncFunction: setUser] },
+    './routers/user/edit.js': { put: [AsyncFunction: editUser] }
+
+}
+```
+## Work using callback
+
+Pros of using <b> callback: </b>
+* Speeds up the development process 
+* Gives the finished route result
+
+
+callback takes 4 arguments:
+* <b>path</b> - route path. Gives the finished path:
+    *  <b>./routers/index.js</b>       -> <b>/</b>
+    *  <b>./routers/user.js </b>       -> <b>/user</b>
+    *  <b>./routers/user.js </b>       -> <b>/user/:id</b>
+    *  <b>./routers/user/add.js </b>   -> <b>/user/add</b>
+    *  <b>./routers/user/edit.js  </b> -> <b>/user/edit</b>
+
+* <b>method</b> - protocol method http
+* <b>fn</b> - function for route work
+* <b>mw</b> - middleware
+
+Callback example uses framework express
+
+```js
+const app = require('express'),
+
+      rout = app.Router(),
+
+      getDateFile = require('get-date-router')
+
+getDateFile('./routers', (path, method, fn, mw) => {
+
+    if(mw != undefined) {
+        rout[method](path, ...mw, fn)
+    } else {
+        rout[method](path, fn)
+    }
+
+})
+
+module.exports = rout
+```
+## Route creation
+
+Using the <b> ./routers/user.js </b> file as an example, consider creating a route
+
+The example uses the [multer](https://www.npmjs.com/package/multer) module to download files and create an additional middleware.
+```js
+
+
+const upload = require('multer')
+
+async function getUser(req, res) {
+    res.send('Route works')
+}
+
+async function postUser(req, res) {
+    res.send('Route works')
+}
+
+module.exports = {
+    get: getUser,
+    post: {
+        fn: postUser,
+        mw: [ upload.single('file') ] /* Middleware - must always be an array */
+    }
+}
+```
+```js
+
+
+const upload = require('multer')
+
+async function getUser(req, res) {
+    res.send('Route works')
+}
+
+async function postUser(req, res) {
+    res.send('Route works')
+}
+
+module.exports = {
+    get: {
+        params: ':id', /* Rises after the main route  */
+        fn: getUser
+    },
+    post: {
+        fn: postUser,
+        mw: [ upload.single('file') ] /* Middleware - must always be an array */
+    }
+}
+```
+
 
 ## Ru
 - [Установка](#установка)
@@ -98,7 +224,7 @@ const data = getDataFile('./routers')
 
 }
 ```
-На примере файла <b>./routers/user.js</b> расмотри создания маршрута
+
 
 
 
@@ -117,7 +243,7 @@ callback принимает на себя 4 аргумента:
     *  <b>./routers/user/add.js </b>   -> <b>/user/add</b>
     *  <b>./routers/user/edit.js  </b> -> <b>/user/edit</b>
 
-* <b>method</b> - метод http протакола
+* <b>method</b> - метод http протокола
 * <b>fn</b> - функцию для работы маршрута
 * <b>mw</b> - промежуточный слой (middleware)
 
@@ -143,6 +269,8 @@ getDateFile('./routers', (path, method, fn, mw) => {
 module.exports = rout
 ```
 ## Создание маршрутов
+
+На примере файла <b>./routers/user.js</b> расмотри создания маршрута
 
 В примере для загрузки фалов и создания дополнительного промежуточного слоя (middleware) используется модуль [multer](https://www.npmjs.com/package/multer)
 
