@@ -33,7 +33,8 @@ $ npm install get-data-router
 const getDataFile = require('get-data-router')
 ```
 <p>В константу getDataFile экспортируется функция.</p>
-<p></p>
+<p>Вызывается функция и она принимает на себя 2 аргумента (path - обязательный, callback - необязательный)</p>
+
 
 ```text
 project/
@@ -45,6 +46,10 @@ project/
 │   │   └── edit.js
 │   ├──users.js
 │   └──index.js
-├── routers.js
+├── router.js
 └── index.js
+```
+```js
+const getDataFile = require('get-data-router')
+getDataFile('./routers')
 ```
