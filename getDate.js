@@ -1,6 +1,5 @@
 const { readdirSync, statSync } = require('fs'),
-    { extname, resolve } = require('path'),
-    chalk = require('chalk'),
+    { extname, resolve } = require('path')
     getDateFile = (importPath, collBack = false, exportObj) => {
         try {
             const obj = exportObj ? exportObj : {},
