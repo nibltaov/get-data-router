@@ -6,8 +6,7 @@ const { readdirSync, statSync } = require('fs'),
             const obj = exportObj ? exportObj : {},
                 _file = readdirSync(importPath)
             for (const value of _file) {
-                const newPath = `${importPath}/${value}`,
-                    stat = statSync(newPath)
+                const newPath = `${importPath}/${value}`, stat = statSync(newPath)
                 if (stat.isFile() && extname(value) === '.js') obj[newPath] = require(resolve(newPath))
                 else if (stat.isDirectory()) getDateFile(newPath, false, obj)
             }
@@ -30,7 +29,7 @@ const { readdirSync, statSync } = require('fs'),
                 }
             } else if (!collBack) return obj
         } catch {
-            return console.warn(chalk.white.bgRed.bold(`There is no such route. Check the correct path`))
+            throw new Error(`There is no such route. Check the correct path`)
         }
     }
 

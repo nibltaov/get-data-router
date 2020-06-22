@@ -1,17 +1,24 @@
 {
   "name": "get-data-router",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This plugin will help facilitate work with routes.",
   "main": "getDate.js",
   "scripts": {
     "test": "echo \"No test specified\""
   },
-  "keywords": ["routes", "express", "fastify", "import", "import directory", "easy routes", "http", "file module exports", "dir"],
+  "keywords": [
+    "routes",
+    "express",
+    "fastify",
+    "import",
+    "import directory",
+    "easy routes",
+    "http",
+    "file module exports",
+    "dir"
+  ],
   "author": "Nikita (Nibltaov)",
   "license": "MIT",
-  "dependencies": {
-    "chalk": "^4.1.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nibltaov/get-data-router.git"
@@ -19,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/nibltaov/get-data-router/issues"
   },
-  "homepage": "https://github.com/nibltaov/get-data-router#readme"
+  "homepage": "https://github.com/nibltaov/get-data-router#readme",
+  "dependencies": {}
 }
