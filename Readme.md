@@ -4,8 +4,8 @@
 <p align="center">Создавайте маршруты быстро и легко с независимым модулем get-data-router</p>
 <p align="center">
     <img src="https://img.shields.io/badge/node-%3E%3D10-green">
-    <img src="https://img.shields.io/badge/code%20size-12.4%20kB-blue">
-    <img src="https://img.shields.io/badge/v-1.0.6-red">
+    <img src="https://img.shields.io/badge/code%20size-7.25%20kB-blue">
+    <img src="https://img.shields.io/badge/v-1.0.7-red">
     <img src="https://img.shields.io/badge/easy-routes-orange">
     
 </p>
