@@ -13,7 +13,9 @@ const { readdirSync, statSync } = require('fs'),
                 for (const key in obj) {   
                     const parseDir = parse(key).dir
                     let cleanUpendPath = key === `${parseDir}/index.js`
-                        ? key.slice(importPath.length, key.length - 'index.js'.length)
+                        ? key.slice(importPath.length, key.length - 'index.js'.length) :
+                                        key === `${parseDir}/default.js`
+                        ? key.slice(importPath.length, key.length - 'default.js'.length) + '*'
                         : key.slice(importPath.length, key.length - '.js'.length)
                         cleanUpendPath = cleanUpendPath.length > 1 && cleanUpendPath[cleanUpendPath.length - 1] === '/'
                                         ? cleanUpendPath.substring(0, cleanUpendPath.length - 1)
