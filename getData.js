@@ -1,5 +1,5 @@
 const { readdirSync, statSync } = require('fs'),
-    { extname, resolve } = require('path')
+    { extname, resolve, parse } = require('path')
     getDateFile = (importPath, collBack = false, exportObj) => {
         try {
             const obj = exportObj ? exportObj : {},
@@ -10,10 +10,14 @@ const { readdirSync, statSync } = require('fs'),
                 else if (stat.isDirectory()) getDateFile(newPath, false, obj)
             }
             if (typeof collBack === 'function') {
-                for (const key in obj) {
-                    const cleanUpendPath = key === `${importPath}/index.js`
+                for (const key in obj) {   
+                    const parseDir = parse(key).dir
+                    let cleanUpendPath = key === `${parseDir}/index.js`
                         ? key.slice(importPath.length, key.length - 'index.js'.length)
                         : key.slice(importPath.length, key.length - '.js'.length)
+                        cleanUpendPath = cleanUpendPath.length > 1 && cleanUpendPath[cleanUpendPath.length - 1] === '/'
+                                        ? cleanUpendPath.substring(0, cleanUpendPath.length - 1)
+                                        : cleanUpendPath                       
                     if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
                         for (const res in obj[key]) {
                             const fn = obj[key][res]
@@ -28,7 +32,7 @@ const { readdirSync, statSync } = require('fs'),
                 }
             } else if (!collBack) return obj
         } catch {
-            throw new Error(`There is no such route. Check the correct path`)
+            console.error(`There is no such route. Check the correct path`)
         }
     }
 

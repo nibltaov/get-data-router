@@ -2,7 +2,7 @@
   "name": "get-data-router",
   "version": "1.0.8",
   "description": "This plugin will help facilitate work with routes.",
-  "main": "getDate.js",
+  "main": "getData.js",
   "scripts": {
     "test": "echo \"No test specified\""
   },
